@@ -62,14 +62,13 @@ class SplashScreen : AppCompatActivity() {
                 ivAcc.animation = topAnim
                 ivBaimbai.animation = bottomAnim
                 ivWood.animation = shakyAnimation
+                ivLeaves.animation = shakyAnimation
             }
             delay(4000)
 
             // animation after half duration of splash screen
             binding.apply {
                 ivRakat.visibility = View.VISIBLE
-                ivLeaves.visibility = View.VISIBLE
-                ivLeaves.animation = fadeAnim
                 ivRakat.animation = lateBottomAnim
             }
             delay(4000)

@@ -3,12 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:visibility="visible">
 
     <ImageView
         android:id="@+id/iv_splash"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:contentDescription="@string/splash_screen"
         android:scaleType="fitXY"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -16,117 +17,107 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/bg" />
+
+    <ImageView
+        android:id="@+id/iv_wood"
+        android:layout_width="0dp"
+        android:layout_height="130dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginEnd="36dp"
+        android:contentDescription="@string/splash_screen"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline_wood"
+        app:srcCompat="@drawable/wood" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_wood"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.80" />
 
     <ImageView
         android:id="@+id/iv_kayuh"
         android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="48dp"
-        android:layout_marginEnd="48dp"
+        android:layout_height="166dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
         android:contentDescription="@string/splash_screen"
-        android:scaleType="centerInside"
-        app:layout_constraintBottom_toTopOf="@+id/guideline"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/iv_splash"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintTop_toTopOf="@+id/guideline_kayuh"
         app:srcCompat="@drawable/kayuh_splash" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.5" />
-
-    <ImageView
-        android:id="@+id/iv_baimbai"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:contentDescription="@string/splash_screen"
-        app:layout_constraintBottom_toBottomOf="@+id/iv_kayuh"
-        app:layout_constraintEnd_toEndOf="@+id/iv_kayuh"
-        app:layout_constraintStart_toStartOf="@+id/iv_kayuh"
-        app:layout_constraintTop_toTopOf="@+id/guideline2"
-        app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/baimbai_splash" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline2"
+        android:id="@+id/guideline_kayuh"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.25" />
 
     <ImageView
-        android:id="@+id/iv_acc"
-        android:layout_width="wrap_content"
+        android:id="@+id/iv_baimbai"
+        android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginTop="56dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
         android:contentDescription="@string/splash_screen"
-        app:layout_constraintBottom_toBottomOf="@+id/iv_kayuh"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/iv_rakat"
+        app:layout_constraintEnd_toEndOf="@+id/iv_kayuh"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/acc_splash_adobespark" />
+        app:layout_constraintStart_toStartOf="@+id/iv_kayuh"
+        app:layout_constraintTop_toTopOf="@+id/guideline7"
+        app:srcCompat="@drawable/baimbai_splash" />
 
     <ImageView
         android:id="@+id/iv_rakat"
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="38dp"
+        android:layout_marginEnd="38dp"
         android:contentDescription="@string/splash_screen"
         android:visibility="invisible"
-        app:layout_constraintBottom_toTopOf="@+id/guideline"
-        app:layout_constraintEnd_toEndOf="@id/iv_baimbai"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/iv_baimbai"
-        app:layout_constraintTop_toTopOf="@+id/guideline3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_acc"
         app:srcCompat="@drawable/rakat_bakula"
         tools:visibility="visible" />
 
     <ImageView
         android:id="@+id/iv_leaves"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
         android:contentDescription="@string/splash_screen"
         android:visibility="invisible"
-        app:layout_constraintBottom_toTopOf="@id/guideline"
-        app:layout_constraintEnd_toEndOf="@+id/iv_baimbai"
-        app:layout_constraintStart_toStartOf="@+id/iv_baimbai"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintBottom_toTopOf="@+id/iv_kayuh"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/leaves"
         tools:visibility="visible" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.4" />
-
     <ImageView
-        android:id="@+id/iv_wood"
-        android:layout_width="0dp"
+        android:id="@+id/iv_acc"
+        android:layout_width="wrap_content"
         android:layout_height="0dp"
+        android:layout_marginTop="6dp"
         android:contentDescription="@string/splash_screen"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/iv_rakat"
-        app:layout_constraintStart_toStartOf="@+id/iv_rakat"
-        app:layout_constraintTop_toTopOf="@+id/guideline4"
-        app:srcCompat="@drawable/wood" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/iv_kayuh"
+        app:srcCompat="@drawable/acc_splash_adobespark" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline4"
+        android:id="@+id/guideline7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.8" />
+        app:layout_constraintGuide_percent="0.46" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
