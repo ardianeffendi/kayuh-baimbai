@@ -9,14 +9,14 @@
         android:id="@+id/iv_splash"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:contentDescription="@string/splash_screen"
         android:scaleType="fitXY"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/bg_splash"
-        android:contentDescription="@string/splash_screen" />
+        app:srcCompat="@drawable/bg" />
 
     <ImageView
         android:id="@+id/iv_kayuh"
@@ -24,6 +24,7 @@
         android:layout_height="0dp"
         android:layout_marginStart="48dp"
         android:layout_marginEnd="48dp"
+        android:contentDescription="@string/splash_screen"
         android:scaleType="centerInside"
         app:layout_constraintBottom_toTopOf="@+id/guideline"
         app:layout_constraintEnd_toEndOf="parent"
@@ -31,8 +32,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/iv_splash"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/kayuh_splash"
-        android:contentDescription="@string/splash_screen" />
+        app:srcCompat="@drawable/kayuh_splash" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline"
@@ -46,13 +46,13 @@
         android:id="@+id/iv_baimbai"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:contentDescription="@string/splash_screen"
         app:layout_constraintBottom_toBottomOf="@+id/iv_kayuh"
         app:layout_constraintEnd_toEndOf="@+id/iv_kayuh"
         app:layout_constraintStart_toStartOf="@+id/iv_kayuh"
         app:layout_constraintTop_toTopOf="@+id/guideline2"
         app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/baimbai_splash"
-        android:contentDescription="@string/splash_screen" />
+        app:srcCompat="@drawable/baimbai_splash" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline2"
@@ -66,11 +66,67 @@
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_marginTop="56dp"
+        android:contentDescription="@string/splash_screen"
         app:layout_constraintBottom_toBottomOf="@+id/iv_kayuh"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/acc_splash_adobespark"
-        android:contentDescription="@string/splash_screen" />
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/acc_splash_adobespark" />
+
+    <ImageView
+        android:id="@+id/iv_rakat"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/splash_screen"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintEnd_toEndOf="@id/iv_baimbai"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/iv_baimbai"
+        app:layout_constraintTop_toTopOf="@+id/guideline3"
+        app:srcCompat="@drawable/rakat_bakula"
+        tools:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/iv_leaves"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:contentDescription="@string/splash_screen"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@id/guideline"
+        app:layout_constraintEnd_toEndOf="@+id/iv_baimbai"
+        app:layout_constraintStart_toStartOf="@+id/iv_baimbai"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/leaves"
+        tools:visibility="visible" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.4" />
+
+    <ImageView
+        android:id="@+id/iv_wood"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/splash_screen"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/iv_rakat"
+        app:layout_constraintStart_toStartOf="@+id/iv_rakat"
+        app:layout_constraintTop_toTopOf="@+id/guideline4"
+        app:srcCompat="@drawable/wood" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.8" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
