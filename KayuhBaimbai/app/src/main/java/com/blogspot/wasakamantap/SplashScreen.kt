@@ -98,7 +98,7 @@ class SplashScreen : AppCompatActivity() {
             media.pause()
 
             // Intent to Main Activity
-            val intent = Intent(this@SplashScreen, MainActivity::class.java)
+            val intent = Intent(this@SplashScreen, MainScreen::class.java)
             startActivity(intent)
             finish()
         }

@@ -1,4 +1,16 @@
 <resources>
     <string name="app_name">KayuhBaimbai</string>
+
+    <!-- Content Description Strings -->
     <string name="splash_screen">Splash Screen</string>
+    <string name="main_title">Main Title</string>
+    <string name="bg">Background</string>
+    <string name="button_settings">Settings Button</string>
+    <string name="main_title2">Title 2</string>
+    <string name="button_tradisi_dan_budaya">Tradisi dan Budaya\'s Button</string>
+    <string name="button_game">Game\'s button</string>
+    <string name="button_komoditas">Komoditas\' button</string>
+    <string name="left_instrumental">Left Instrumental\'s Image</string>
+    <string name="right_instrumental">Right Instrumental\'s Image</string>
+
 </resources>

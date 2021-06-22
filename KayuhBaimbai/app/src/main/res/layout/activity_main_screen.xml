@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainScreen">
+
+    <ImageView
+        android:id="@+id/iv_bg"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/sasirangan"
+        android:contentDescription="@string/bg" />
+
+    <ImageView
+        android:id="@+id/iv_title"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/main_kayuh_baimbai"
+        android:contentDescription="@string/main_title" />
+
+    <ImageView
+        android:id="@+id/iv_setting"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/main_setting"
+        android:contentDescription="@string/button_settings" />
+
+    <ImageView
+        android:id="@+id/iv_title2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_hz_right"
+        app:layout_constraintStart_toStartOf="@+id/guideline_hz_left"
+        app:layout_constraintTop_toBottomOf="@+id/iv_title"
+        app:srcCompat="@drawable/main_rakat_bakula"
+        android:contentDescription="@string/main_title2" />
+
+    <ImageView
+        android:id="@+id/iv_tradisi"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="16dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_hz_right"
+        app:layout_constraintStart_toStartOf="@+id/guideline_hz_left"
+        app:layout_constraintTop_toTopOf="@+id/guideline_title"
+        app:srcCompat="@drawable/main_tradisi"
+        android:contentDescription="@string/button_tradisi_dan_budaya" />
+
+    <ImageView
+        android:id="@+id/iv_game"
+        android:layout_width="0dp"
+        android:layout_height="130dp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_hz_right"
+        app:layout_constraintStart_toStartOf="@+id/guideline_hz_left"
+        app:layout_constraintTop_toTopOf="@+id/guideline_middle"
+        app:srcCompat="@drawable/main_game"
+        android:contentDescription="@string/button_game" />
+
+    <ImageView
+        android:id="@+id/iv_komoditas"
+        android:layout_width="0dp"
+        android:layout_height="110dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_hz_right"
+        app:layout_constraintStart_toStartOf="@+id/guideline_hz_left"
+        app:layout_constraintTop_toTopOf="@+id/guideline6"
+        app:srcCompat="@drawable/main_komoditas"
+        android:contentDescription="@string/button_komoditas" />
+
+    <ImageView
+        android:id="@+id/iv_left_instrumental"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="120dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_hz_left"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline_middle"
+        app:srcCompat="@drawable/main_instrumental1"
+        android:contentDescription="@string/left_instrumental" />
+
+    <ImageView
+        android:id="@+id/iv_right_instrumental"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="120dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline_hz_right"
+        app:layout_constraintTop_toTopOf="@+id/guideline_middle"
+        app:srcCompat="@drawable/main_instrumental"
+        android:contentDescription="@string/right_instrumental" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.3" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_hz_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.2" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_hz_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.8" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_middle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.65" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
