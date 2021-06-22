@@ -10,6 +10,7 @@
         android:screenOrientation="portrait"
         android:supportsRtl="true"
         android:theme="@style/Theme.KayuhBaimbai">
+        <activity android:name=".BlankScreen"></activity>
         <activity android:name=".OpeningScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

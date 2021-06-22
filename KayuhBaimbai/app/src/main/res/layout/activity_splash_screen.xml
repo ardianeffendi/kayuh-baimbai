@@ -35,13 +35,6 @@
         app:srcCompat="@drawable/wood"
         tools:visibility="visible" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline_wood"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.80" />
-
     <ImageView
         android:id="@+id/iv_kayuh"
         android:layout_width="0dp"
@@ -54,13 +47,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline_kayuh"
         app:srcCompat="@drawable/kayuh_splash" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline_kayuh"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.25" />
 
     <ImageView
         android:id="@+id/iv_baimbai"
@@ -115,6 +101,35 @@
         app:layout_constraintTop_toTopOf="@+id/iv_kayuh"
         app:srcCompat="@drawable/acc_splash_adobespark" />
 
+    <ImageView
+        android:id="@+id/iv_line"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="32dp"
+        android:contentDescription="@string/splash_screen"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/iv_leaves"
+        app:srcCompat="@drawable/wavy_line"
+        tools:visibility="visible" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_wood"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.80" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_kayuh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.25" />
+
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline7"
         android:layout_width="wrap_content"
@@ -131,18 +146,5 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
-
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="32dp"
-        android:contentDescription="@string/splash_screen"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/iv_leaves"
-        app:srcCompat="@drawable/wavy_line" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
