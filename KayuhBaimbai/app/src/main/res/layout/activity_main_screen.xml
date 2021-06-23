@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@color/black"
     tools:context=".MainScreen">
 
     <ImageView
@@ -16,7 +16,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/sasirangan"
+        app:srcCompat="@drawable/main_bg"
         android:contentDescription="@string/bg" />
 
     <ImageView
@@ -35,12 +35,12 @@
         android:id="@+id/iv_setting"
         android:layout_width="48dp"
         android:layout_height="48dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginTop="38dp"
+        android:layout_marginEnd="16dp"
+        android:contentDescription="@string/button_settings"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/main_setting"
-        android:contentDescription="@string/button_settings" />
+        app:srcCompat="@drawable/main_setting" />
 
     <ImageView
         android:id="@+id/iv_title2"
@@ -89,28 +89,32 @@
         android:id="@+id/iv_left_instrumental"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_marginStart="24dp"
         android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
         android:layout_marginBottom="120dp"
+        android:contentDescription="@string/left_instrumental"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/guideline_hz_left"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline_middle"
-        app:srcCompat="@drawable/main_instrumental1"
-        android:contentDescription="@string/left_instrumental" />
+        app:srcCompat="@drawable/main_instrumental1" />
 
     <ImageView
         android:id="@+id/iv_right_instrumental"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="32dp"
+        android:layout_marginEnd="24dp"
         android:layout_marginBottom="120dp"
+        android:contentDescription="@string/right_instrumental"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/guideline_hz_right"
         app:layout_constraintTop_toTopOf="@+id/guideline_middle"
-        app:srcCompat="@drawable/main_instrumental"
-        android:contentDescription="@string/right_instrumental" />
+        app:srcCompat="@drawable/main_instrumental" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_title"

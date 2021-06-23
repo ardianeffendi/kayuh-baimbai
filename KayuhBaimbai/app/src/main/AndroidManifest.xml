@@ -10,16 +10,19 @@
         android:screenOrientation="portrait"
         android:supportsRtl="true"
         android:theme="@style/Theme.KayuhBaimbai">
-        <activity android:name=".MainScreen"></activity>
-        <activity android:name=".BlankScreen" />
-        <activity android:name=".OpeningScreen">
+        <activity android:name=".TradisiScreen"></activity>
+        <activity android:name=".GameScreen" />
+        <activity android:name=".KomoditasScreen" />
+        <activity android:name=".MainScreen" />
+        <activity android:name=".opening.BlankScreen" />
+        <activity android:name=".opening.OpeningScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SplashScreen" />
+        <activity android:name=".opening.SplashScreen" />
         <activity android:name=".MainActivity" />
     </application>
 
