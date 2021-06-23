@@ -1,7 +1,13 @@
 package com.blogspot.wasakamantap.utils
 
+import android.animation.ObjectAnimator
+import android.animation.PropertyValuesHolder
+import android.animation.ValueAnimator
 import android.app.Activity
+import android.content.Context
+import android.media.MediaPlayer
 import android.os.Build
+import android.view.View
 import android.view.WindowInsets
 import android.view.WindowManager
 
@@ -15,4 +21,21 @@ fun hideStatusBar(activity: Activity) {
             WindowManager.LayoutParams.FLAG_FULLSCREEN
         )
     }
+}
+
+fun shrinkAndGrowAnim(view: View) : ObjectAnimator {
+    val scaleDown = ObjectAnimator.ofPropertyValuesHolder(
+        view,
+        PropertyValuesHolder.ofFloat("scaleX", 0.5f),
+        PropertyValuesHolder.ofFloat("scaleY", 0.5f)
+    )
+    scaleDown.duration = 2000
+    scaleDown.repeatMode = ValueAnimator.REVERSE
+    scaleDown.repeatCount = ValueAnimator.INFINITE
+
+    return scaleDown
+}
+
+fun mediaPlayer(context: Context, resId: Int): MediaPlayer {
+    return MediaPlayer.create(context, resId)
 }

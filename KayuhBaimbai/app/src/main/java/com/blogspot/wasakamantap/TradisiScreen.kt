@@ -1,12 +1,12 @@
 package com.blogspot.wasakamantap
 
 import android.annotation.SuppressLint
-import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MotionEvent
+import androidx.appcompat.app.AppCompatActivity
 import com.blogspot.wasakamantap.databinding.ActivityTradisiScreenBinding
 import com.blogspot.wasakamantap.utils.hideStatusBar
+import com.blogspot.wasakamantap.utils.mediaPlayer
 
 @SuppressLint("ClickableViewAccessibility")
 class TradisiScreen : AppCompatActivity() {
@@ -20,10 +20,16 @@ class TradisiScreen : AppCompatActivity() {
         hideStatusBar(this)
 
         binding.ivTradisiBack.setOnTouchListener { v, event ->
+            val media = mediaPlayer(this, R.raw.click)
             when (event.action) {
-                MotionEvent.ACTION_DOWN -> return@setOnTouchListener true
+                MotionEvent.ACTION_DOWN -> {
+                    media.start()
+                    return@setOnTouchListener true
+                }
                 MotionEvent.ACTION_UP -> {
                     this.onBackPressed()
+                    media.stop()
+                    media.release()
                     return@setOnTouchListener true
                 }
                 else -> return@setOnTouchListener false

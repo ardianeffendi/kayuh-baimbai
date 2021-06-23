@@ -2,6 +2,7 @@ package com.blogspot.wasakamantap
 
 import android.annotation.SuppressLint
 import android.content.Intent
+import android.media.MediaPlayer
 import android.os.Bundle
 import android.view.MotionEvent
 import android.view.animation.Animation
@@ -9,6 +10,8 @@ import android.view.animation.AnimationUtils
 import androidx.appcompat.app.AppCompatActivity
 import com.blogspot.wasakamantap.databinding.ActivityMainScreenBinding
 import com.blogspot.wasakamantap.utils.hideStatusBar
+import com.blogspot.wasakamantap.utils.mediaPlayer
+import com.blogspot.wasakamantap.utils.shrinkAndGrowAnim
 
 @SuppressLint("ClickableViewAccessibility")
 class MainScreen : AppCompatActivity() {
@@ -30,34 +33,33 @@ class MainScreen : AppCompatActivity() {
         topAnim = AnimationUtils.loadAnimation(this, R.anim.top_animation)
         shakyAnim = AnimationUtils.loadAnimation(this, R.anim.shaky_animation)
 
-
         binding.ivTitle.animation = topAnim
-        topAnim.setAnimationListener(object : Animation.AnimationListener {
-            override fun onAnimationStart(animation: Animation?) {
 
-            }
-
-            override fun onAnimationEnd(animation: Animation?) {
-                binding.ivTitle.animation = shakyAnim
-            }
-
-            override fun onAnimationRepeat(animation: Animation?) {
-
-            }
-
-        })
+        /**
+         * Shrink and Grow Animation
+         */
+        val leftInstrumental = shrinkAndGrowAnim(binding.ivLeftInstrumental)
+        val rightInstrumental = shrinkAndGrowAnim(binding.ivRightInstrumental)
+        leftInstrumental.start()
+        rightInstrumental.start()
 
         /**
          * TODO: Have to refactor this repeated code!
          * TODO: Create CustomImageView and apply it to every image touch listener
          */
         binding.ivTradisi.setOnTouchListener { v, event ->
+            val media = mediaPlayer(this, R.raw.click)
             when (event.action) {
-                MotionEvent.ACTION_DOWN -> return@setOnTouchListener true
+                MotionEvent.ACTION_DOWN -> {
+                    media.start()
+                    return@setOnTouchListener true
+                }
                 MotionEvent.ACTION_UP -> {
                     val intent = Intent(this, TradisiScreen::class.java)
                     startActivity(intent)
                     overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
+                    media.stop()
+                    media.release()
                     return@setOnTouchListener true
                 }
                 else -> return@setOnTouchListener false
@@ -65,12 +67,18 @@ class MainScreen : AppCompatActivity() {
         }
 
         binding.ivGame.setOnTouchListener { v, event ->
+            val media = mediaPlayer(this, R.raw.click)
             when (event.action) {
-                MotionEvent.ACTION_DOWN -> return@setOnTouchListener true
+                MotionEvent.ACTION_DOWN -> {
+                    media.start()
+                    return@setOnTouchListener true
+                }
                 MotionEvent.ACTION_UP -> {
                     val intent = Intent(this, GameScreen::class.java)
                     startActivity(intent)
                     overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
+                    media.stop()
+                    media.release()
                     return@setOnTouchListener true
                 }
                 else -> return@setOnTouchListener false
@@ -78,12 +86,18 @@ class MainScreen : AppCompatActivity() {
         }
 
         binding.ivKomoditas.setOnTouchListener { v, event ->
+            val media = mediaPlayer(this, R.raw.click)
             when (event.action) {
-                MotionEvent.ACTION_DOWN -> return@setOnTouchListener true
+                MotionEvent.ACTION_DOWN -> {
+                    media.start()
+                    return@setOnTouchListener true
+                }
                 MotionEvent.ACTION_UP -> {
                     val intent = Intent(this, KomoditasScreen   ::class.java)
                     startActivity(intent)
                     overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
+                    media.stop()
+                    media.release()
                     return@setOnTouchListener true
                 }
                 else -> return@setOnTouchListener false
