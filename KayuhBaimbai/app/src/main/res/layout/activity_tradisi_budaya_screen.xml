@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/black"
-    tools:context=".TradisiScreen">
+    tools:context=".TradisiBudayaScreen">
 
     <ImageView
         android:id="@+id/iv_tradisi_bg"
@@ -16,7 +16,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/sasirangan" />
+        app:srcCompat="@drawable/sasirangan"
+        android:contentDescription="@string/bg" />
 
     <ImageView
         android:id="@+id/iv_tradisi_bar"
@@ -26,7 +27,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/status_tradisi" />
+        app:srcCompat="@drawable/status_tradisi"
+        android:contentDescription="@string/bg" />
 
     <ImageView
         android:id="@+id/iv_tradisi_back"
@@ -35,7 +37,8 @@
         android:scaleType="fitXY"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/back_button" />
+        app:srcCompat="@drawable/back_button"
+        android:contentDescription="@string/button_back" />
 
     <ImageView
         android:id="@+id/imageView5"
@@ -44,5 +47,6 @@
         android:scaleType="fitXY"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/setting_button" />
+        app:srcCompat="@drawable/setting_button"
+        android:contentDescription="@string/button_settings" />
 </androidx.constraintlayout.widget.ConstraintLayout>

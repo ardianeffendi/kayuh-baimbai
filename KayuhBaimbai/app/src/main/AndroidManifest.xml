@@ -10,7 +10,7 @@
         android:screenOrientation="portrait"
         android:supportsRtl="true"
         android:theme="@style/Theme.KayuhBaimbai">
-        <activity android:name=".TradisiScreen"></activity>
+        <activity android:name=".TradisiBudayaScreen" />
         <activity android:name=".GameScreen" />
         <activity android:name=".KomoditasScreen" />
         <activity android:name=".MainScreen" />
@@ -23,7 +23,6 @@
             </intent-filter>
         </activity>
         <activity android:name=".opening.SplashScreen" />
-        <activity android:name=".MainActivity" />
     </application>
 
 </manifest>
