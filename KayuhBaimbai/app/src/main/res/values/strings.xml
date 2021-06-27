@@ -12,5 +12,6 @@
     <string name="button_komoditas">Komoditas\' button</string>
     <string name="left_instrumental">Left Instrumental\'s Image</string>
     <string name="right_instrumental">Right Instrumental\'s Image</string>
+    <string name="button_back">Back Button</string>
 
 </resources>
