@@ -1,6 +1,7 @@
 package com.blogspot.wasakamantap
 
 import android.annotation.SuppressLint
+import android.media.MediaPlayer
 import android.os.Bundle
 import android.view.MotionEvent
 import androidx.appcompat.app.AppCompatActivity
@@ -17,6 +18,7 @@ class KomoditasScreen : BaseActivity() {
         binding = ActivityKomoditasScreenBinding.inflate(layoutInflater)
         setContentView(binding.root)
         hideStatusBar(this)
+        media = MediaPlayer.create(this, R.raw.click)
         touchBackListener(binding.ivKomoditasBack)
     }
 

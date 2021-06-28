@@ -21,7 +21,8 @@ import kotlinx.coroutines.Dispatchers
 class SplashScreen : AppCompatActivity() {
 
     private lateinit var binding: ActivitySplashScreenBinding
-    private val activityScope = CoroutineScope(Dispatchers.Main)
+    private lateinit var media: MediaPlayer
+    private lateinit var click: MediaPlayer
 
     // Animation Variables
     private lateinit var topAnim: Animation
@@ -63,7 +64,7 @@ class SplashScreen : AppCompatActivity() {
             .start()
 
         // Create media player to play audio during splash screen
-        val media: MediaPlayer = MediaPlayer.create(this@SplashScreen, R.raw.panting)
+        media = MediaPlayer.create(this, R.raw.panting)
         media.start()
 
         // animation for main part
@@ -101,16 +102,27 @@ class SplashScreen : AppCompatActivity() {
          * Button "Mulai" is clicked
          */
         binding.button.setOnClickListener {
-            val click = MediaPlayer.create(this, R.raw.click)
+            click = MediaPlayer.create(this, R.raw.click)
             click.start()
 
             // Intent to Main Activity
             val intent = Intent(this@SplashScreen, MainScreen::class.java)
             startActivity(intent)
 
-            media.stop()
             media.release()
             finish()
         }
+    }
+
+    override fun onStop() {
+        super.onStop()
+        click.release()
+        media.release()
+    }
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+        click.release()
+        finish()
     }
 }

@@ -3,10 +3,10 @@ package com.blogspot.wasakamantap
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.media.MediaPlayer
+import android.util.Log
 import android.view.MotionEvent
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
-import com.blogspot.wasakamantap.utils.mediaPlayer
 
 /**
  * Base Activity Class
@@ -16,6 +16,8 @@ import com.blogspot.wasakamantap.utils.mediaPlayer
 @SuppressLint("ClickableViewAccessibility")
 abstract class BaseActivity : AppCompatActivity() {
 
+    protected var media: MediaPlayer? = null
+
     /**
      * Custom Image Touch Listener that provides
      * an intent to a called activity and sound effect.
@@ -24,19 +26,17 @@ abstract class BaseActivity : AppCompatActivity() {
      * @param activity activity destination
      */
     fun touchImageListener(view: View, activity: AppCompatActivity) {
-        val media = MediaPlayer.create(this, R.raw.click)
         view.setOnTouchListener { _, event ->
             when(event.action) {
                 MotionEvent.ACTION_DOWN -> {
-                    media.start()
+                    playMedia()
                     return@setOnTouchListener true
                 }
                 MotionEvent.ACTION_UP -> {
+                    stopMedia()
                     val intent = Intent(this, activity::class.java)
                     startActivity(intent)
                     overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
-                    media.stop()
-                    media.release()
                     return@setOnTouchListener true
                 }
                 else -> return@setOnTouchListener false
@@ -50,16 +50,14 @@ abstract class BaseActivity : AppCompatActivity() {
      */
     fun touchBackListener(view: View) {
         view.setOnTouchListener { _, event ->
-            val media = mediaPlayer(this, R.raw.click)
             when (event.action) {
                 MotionEvent.ACTION_DOWN -> {
-                    media.start()
+                    playMedia()
                     return@setOnTouchListener true
                 }
                 MotionEvent.ACTION_UP -> {
+                    stopMedia()
                     this.onBackPressed()
-                    media.stop()
-                    media.release()
                     return@setOnTouchListener true
                 }
                 else -> return@setOnTouchListener false
@@ -67,9 +65,32 @@ abstract class BaseActivity : AppCompatActivity() {
         }
     }
 
+    private fun playMedia() {
+        if (media == null) {
+            media = MediaPlayer.create(this, R.raw.click)
+            media?.setOnCompletionListener {
+                stopMedia()
+            }
+        }
+        media?.start()
+    }
+
+    private fun stopMedia() {
+        media?.let {
+            it.release()
+            media = null
+        }
+    }
+
+    override fun onStop() {
+        super.onStop()
+        stopMedia()
+    }
+
     override fun onBackPressed() {
         super.onBackPressed()
         finish()
         overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right)
     }
+
 }

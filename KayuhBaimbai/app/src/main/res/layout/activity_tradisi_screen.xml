@@ -5,33 +5,33 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/black"
-    tools:context=".KomoditasScreen">
+    tools:context=".tradisibudaya.TradisiScreen">
 
     <ImageView
-        android:id="@+id/iv_komoditas_bg"
+        android:id="@+id/iv_tradisi_bg"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:contentDescription="@string/bg"
         android:scaleType="fitXY"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/sasirangan"
-        android:contentDescription="@string/bg" />
+        app:srcCompat="@drawable/bg_sasirangan_double" />
 
     <ImageView
-        android:id="@+id/iv_komoditas_bar"
+        android:id="@+id/iv_tradisi_bar"
         android:layout_width="0dp"
         android:layout_height="45dp"
         android:scaleType="fitXY"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/status_komoditas"
+        app:srcCompat="@drawable/status_tradisi"
         android:contentDescription="@string/status_bar" />
 
     <ImageView
-        android:id="@+id/iv_komoditas_back"
+        android:id="@+id/iv_tradisi_back"
         android:layout_width="65dp"
         android:layout_height="45dp"
         android:scaleType="fitXY"
@@ -41,7 +41,7 @@
         android:contentDescription="@string/button_back" />
 
     <ImageView
-        android:id="@+id/iv_komoditas_setting"
+        android:id="@+id/iv_tradisi_setting"
         android:layout_width="65dp"
         android:layout_height="45dp"
         android:scaleType="fitXY"

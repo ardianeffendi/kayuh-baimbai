@@ -10,7 +10,11 @@
         android:screenOrientation="portrait"
         android:supportsRtl="true"
         android:theme="@style/Theme.KayuhBaimbai">
-        <activity android:name=".TradisiBudayaScreen" />
+        <activity android:name=".SettingScreen" />
+        <activity android:name=".tradisibudaya.PermainanTradisionalScreen" />
+        <activity android:name=".tradisibudaya.KesenianScreen" />
+        <activity android:name=".tradisibudaya.TradisiScreen" />
+        <activity android:name=".tradisibudaya.TradisiBudayaScreen" />
         <activity android:name=".GameScreen" />
         <activity android:name=".KomoditasScreen" />
         <activity android:name=".MainScreen" />

@@ -13,5 +13,9 @@
     <string name="left_instrumental">Left Instrumental\'s Image</string>
     <string name="right_instrumental">Right Instrumental\'s Image</string>
     <string name="button_back">Back Button</string>
+    <string name="tradisi_balloon">Tradisi Button</string>
+    <string name="kesenian_balloon_button">Kesenian Button</string>
+    <string name="traditional_game_balloon_button">Permainan Tradisional Button</string>
+    <string name="status_bar">Status Bar</string>
 
 </resources>
