@@ -20,6 +20,7 @@ class KomoditasScreen : BaseActivity() {
         hideStatusBar(this)
         media = MediaPlayer.create(this, R.raw.click)
         touchBackListener(binding.ivKomoditasBack)
+        touchImageListener(binding.ivKomoditasSetting, SettingScreen())
     }
 
 }

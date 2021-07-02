@@ -65,6 +65,23 @@ abstract class BaseActivity : AppCompatActivity() {
         }
     }
 
+    fun destroyApp(view: View) {
+        view.setOnTouchListener { _, event ->
+            when (event.action) {
+                MotionEvent.ACTION_DOWN -> {
+                    playMedia()
+                    return@setOnTouchListener true
+                }
+                MotionEvent.ACTION_UP -> {
+                    stopMedia()
+                    finish()
+                    return@setOnTouchListener true
+                }
+                else -> return@setOnTouchListener false
+            }
+        }
+    }
+
     private fun playMedia() {
         if (media == null) {
             media = MediaPlayer.create(this, R.raw.click)
@@ -89,7 +106,6 @@ abstract class BaseActivity : AppCompatActivity() {
 
     override fun onBackPressed() {
         super.onBackPressed()
-        finish()
         overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right)
     }
 

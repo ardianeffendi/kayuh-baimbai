@@ -45,6 +45,7 @@ class MainScreen : BaseActivity() {
         touchImageListener(binding.ivTradisi, TradisiBudayaScreen())
         touchImageListener(binding.ivGame, GameScreen())
         touchImageListener(binding.ivKomoditas, KomoditasScreen())
+        touchImageListener(binding.ivSetting, SettingScreen())
     }
 
     override fun onBackPressed() {

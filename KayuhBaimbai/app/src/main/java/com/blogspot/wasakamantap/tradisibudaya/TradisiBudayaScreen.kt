@@ -7,6 +7,7 @@ import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 import com.blogspot.wasakamantap.BaseActivity
 import com.blogspot.wasakamantap.R
+import com.blogspot.wasakamantap.SettingScreen
 import com.blogspot.wasakamantap.databinding.ActivityTradisiBudayaScreenBinding
 import com.blogspot.wasakamantap.utils.hideStatusBar
 
@@ -34,12 +35,13 @@ class TradisiBudayaScreen : BaseActivity() {
         touchBackListener(binding.ivTradisiBudayaBack)
 
         /**
-         * Touch Listener to Tradisi, Kesenian, and Permainan Tradisional.
+         * Touch Listener to Tradisi, Kesenian, Permainan Tradisional and Setting Screen.
          * @see BaseActivity.touchImageListener
          */
         touchImageListener(binding.ivTradisiBalloon, TradisiScreen())
         touchImageListener(binding.ivKesenianBalloon, KesenianScreen())
         touchImageListener(binding.ivTraditionalGameBalloon, PermainanTradisionalScreen())
+        touchImageListener(binding.ivSettingTradisiBudaya, SettingScreen())
 
     }
 

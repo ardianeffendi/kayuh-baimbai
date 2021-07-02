@@ -17,5 +17,12 @@
     <string name="kesenian_balloon_button">Kesenian Button</string>
     <string name="traditional_game_balloon_button">Permainan Tradisional Button</string>
     <string name="status_bar">Status Bar</string>
+    <string name="setting_frame">Setting\'s Frame</string>
+    <string name="setting_volume_button">Volume Button</string>
+    <string name="setting_exit_button">Exit Button</string>
+    <string name="setting_main_menu_button">Main Menu Button</string>
+    <string name="button_close">Button Close</string>
+    <string name="volume_frame">Volume Frame</string>
+    <string name="sound_icon">Volume Sound Icon</string>
 
 </resources>

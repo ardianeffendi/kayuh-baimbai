@@ -23,6 +23,7 @@ class GameScreen : BaseActivity() {
         hideStatusBar(this)
         media = MediaPlayer.create(this, R.raw.click)
         touchBackListener(binding.ivGameBack)
+        touchImageListener(binding.ivGameSetting, SettingScreen())
     }
 
 }

@@ -4,6 +4,7 @@ import android.media.MediaPlayer
 import android.os.Bundle
 import com.blogspot.wasakamantap.BaseActivity
 import com.blogspot.wasakamantap.R
+import com.blogspot.wasakamantap.SettingScreen
 import com.blogspot.wasakamantap.databinding.ActivityKesenianScreenBinding
 import com.blogspot.wasakamantap.utils.hideStatusBar
 
@@ -18,5 +19,6 @@ class KesenianScreen : BaseActivity() {
         hideStatusBar(this)
         media = MediaPlayer.create(this, R.raw.click)
         touchBackListener(binding.ivKesenianBack)
+        touchImageListener(binding.ivSettingKesenian, SettingScreen())
     }
 }
