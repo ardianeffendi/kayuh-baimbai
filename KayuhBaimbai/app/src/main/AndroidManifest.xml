@@ -10,6 +10,7 @@
         android:screenOrientation="portrait"
         android:supportsRtl="true"
         android:theme="@style/Theme.KayuhBaimbai">
+        <activity android:name=".GamePlayScreen"></activity>
         <activity android:name=".SettingScreen" />
         <activity android:name=".tradisibudaya.PermainanTradisionalScreen" />
         <activity android:name=".tradisibudaya.KesenianScreen" />

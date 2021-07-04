@@ -19,6 +19,6 @@ class KesenianScreen : BaseActivity() {
         hideStatusBar(this)
         media = MediaPlayer.create(this, R.raw.click)
         touchBackListener(binding.ivKesenianBack)
-        touchImageListener(binding.ivSettingKesenian, SettingScreen())
+        touchImageIntentListener(binding.ivSettingKesenian, SettingScreen(), true)
     }
 }

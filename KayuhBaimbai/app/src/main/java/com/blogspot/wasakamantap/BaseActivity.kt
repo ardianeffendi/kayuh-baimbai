@@ -3,7 +3,6 @@ package com.blogspot.wasakamantap
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.media.MediaPlayer
-import android.util.Log
 import android.view.MotionEvent
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
@@ -25,7 +24,7 @@ abstract class BaseActivity : AppCompatActivity() {
      * @param view a view to be clicked
      * @param activity activity destination
      */
-    fun touchImageListener(view: View, activity: AppCompatActivity) {
+    fun touchImageIntentListener(view: View, activity: AppCompatActivity, backStack: Boolean) {
         view.setOnTouchListener { _, event ->
             when(event.action) {
                 MotionEvent.ACTION_DOWN -> {
@@ -35,7 +34,13 @@ abstract class BaseActivity : AppCompatActivity() {
                 MotionEvent.ACTION_UP -> {
                     stopMedia()
                     val intent = Intent(this, activity::class.java)
-                    startActivity(intent)
+                    if (backStack) {
+                        startActivity(intent)
+                    } else {
+                        intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                        startActivity(intent)
+                        finish()
+                    }
                     overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
                     return@setOnTouchListener true
                 }
@@ -65,6 +70,10 @@ abstract class BaseActivity : AppCompatActivity() {
         }
     }
 
+    /**
+     * Custom touch view listener that destroys the app completely.
+     * @param view a view to be clicked
+     */
     fun destroyApp(view: View) {
         view.setOnTouchListener { _, event ->
             when (event.action) {
@@ -74,7 +83,7 @@ abstract class BaseActivity : AppCompatActivity() {
                 }
                 MotionEvent.ACTION_UP -> {
                     stopMedia()
-                    finish()
+                    this.finishAffinity()
                     return@setOnTouchListener true
                 }
                 else -> return@setOnTouchListener false
@@ -82,7 +91,7 @@ abstract class BaseActivity : AppCompatActivity() {
         }
     }
 
-    private fun playMedia() {
+    fun playMedia() {
         if (media == null) {
             media = MediaPlayer.create(this, R.raw.click)
             media?.setOnCompletionListener {
@@ -92,7 +101,7 @@ abstract class BaseActivity : AppCompatActivity() {
         media?.start()
     }
 
-    private fun stopMedia() {
+    fun stopMedia() {
         media?.let {
             it.release()
             media = null

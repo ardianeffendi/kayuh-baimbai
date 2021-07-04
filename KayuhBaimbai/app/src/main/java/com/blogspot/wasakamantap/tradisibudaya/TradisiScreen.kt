@@ -19,7 +19,7 @@ class TradisiScreen : BaseActivity() {
         hideStatusBar(this)
         media = MediaPlayer.create(this, R.raw.click)
         touchBackListener(binding.ivTradisiBack)
-        touchImageListener(binding.ivTradisiSetting, SettingScreen())
+        touchImageIntentListener(binding.ivTradisiSetting, SettingScreen(), true)
     }
 
 }

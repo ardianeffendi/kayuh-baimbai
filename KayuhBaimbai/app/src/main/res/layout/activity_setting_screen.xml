@@ -23,11 +23,11 @@
     <ImageView
         android:id="@+id/iv_setting_frame"
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="250dp"
         android:layout_marginStart="64dp"
         android:layout_marginEnd="64dp"
         android:contentDescription="@string/setting_frame"
-        android:scaleType="fitCenter"
+        android:scaleType="fitXY"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -57,10 +57,10 @@
         android:layout_height="50dp"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
-        android:layout_marginBottom="12dp"
+        android:layout_marginBottom="24dp"
         android:contentDescription="@string/setting_exit_button"
         android:scaleType="fitCenter"
-        app:layout_constraintBottom_toTopOf="@+id/guideline2"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_setting_frame"
         app:layout_constraintEnd_toEndOf="@+id/iv_setting_frame"
         app:layout_constraintStart_toStartOf="@+id/iv_setting_frame"
         app:srcCompat="@drawable/settings_exit_button" />
@@ -70,51 +70,33 @@
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="68dp"
         android:layout_marginEnd="32dp"
         android:contentDescription="@string/setting_main_menu_button"
         android:scaleType="fitCenter"
         app:layout_constraintEnd_toEndOf="@+id/iv_setting_frame"
         app:layout_constraintStart_toStartOf="@+id/iv_setting_frame"
-        app:layout_constraintTop_toTopOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="@+id/iv_setting_frame"
         app:srcCompat="@drawable/settings_mainmenu_button" />
 
     <ImageView
         android:id="@+id/iv_setting_close"
         android:layout_width="30dp"
         android:layout_height="30dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="18dp"
         android:background="@android:color/transparent"
         android:contentDescription="@string/button_close"
-        app:layout_constraintBottom_toTopOf="@+id/guideline"
         app:layout_constraintEnd_toEndOf="@+id/iv_setting_frame"
-        app:layout_constraintTop_toTopOf="@+id/guideline3" />
+        app:layout_constraintTop_toTopOf="@+id/iv_setting_frame" />
 
     <include
         android:id="@+id/layout_volume"
         layout="@layout/layout_volume"
-        android:visibility="gone"
-        tools:visibility="visible"/>
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.41" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.65" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.34" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="gone" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

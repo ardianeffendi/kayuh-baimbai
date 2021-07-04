@@ -1,9 +1,7 @@
 package com.blogspot.wasakamantap
 
 import android.annotation.SuppressLint
-import android.media.MediaPlayer
 import android.os.Bundle
-import android.util.Log
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 import com.blogspot.wasakamantap.databinding.ActivityMainScreenBinding
@@ -40,12 +38,12 @@ class MainScreen : BaseActivity() {
 
         /**
          * Touch Listener to specific screen
-         * @see BaseActivity.touchImageListener
+         * @see BaseActivity.touchImageIntentListener
          */
-        touchImageListener(binding.ivTradisi, TradisiBudayaScreen())
-        touchImageListener(binding.ivGame, GameScreen())
-        touchImageListener(binding.ivKomoditas, KomoditasScreen())
-        touchImageListener(binding.ivSetting, SettingScreen())
+        touchImageIntentListener(binding.ivTradisi, TradisiBudayaScreen(), true)
+        touchImageIntentListener(binding.ivGame, GameScreen(), true)
+        touchImageIntentListener(binding.ivKomoditas, KomoditasScreen(), true)
+        touchImageIntentListener(binding.ivSetting, SettingScreen(), true)
     }
 
     override fun onBackPressed() {

@@ -1,10 +1,7 @@
 package com.blogspot.wasakamantap.tradisibudaya
 
-import android.annotation.SuppressLint
 import android.media.MediaPlayer
 import android.os.Bundle
-import android.view.animation.Animation
-import android.view.animation.AnimationUtils
 import com.blogspot.wasakamantap.BaseActivity
 import com.blogspot.wasakamantap.R
 import com.blogspot.wasakamantap.SettingScreen
@@ -36,12 +33,12 @@ class TradisiBudayaScreen : BaseActivity() {
 
         /**
          * Touch Listener to Tradisi, Kesenian, Permainan Tradisional and Setting Screen.
-         * @see BaseActivity.touchImageListener
+         * @see BaseActivity.touchImageIntentListener
          */
-        touchImageListener(binding.ivTradisiBalloon, TradisiScreen())
-        touchImageListener(binding.ivKesenianBalloon, KesenianScreen())
-        touchImageListener(binding.ivTraditionalGameBalloon, PermainanTradisionalScreen())
-        touchImageListener(binding.ivSettingTradisiBudaya, SettingScreen())
+        touchImageIntentListener(binding.ivTradisiBalloon, TradisiScreen(), true)
+        touchImageIntentListener(binding.ivKesenianBalloon, KesenianScreen(), true)
+        touchImageIntentListener(binding.ivTraditionalGameBalloon, PermainanTradisionalScreen(), true)
+        touchImageIntentListener(binding.ivSettingTradisiBudaya, SettingScreen(), true)
 
     }
 

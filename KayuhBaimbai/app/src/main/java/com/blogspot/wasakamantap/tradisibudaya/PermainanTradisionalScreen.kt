@@ -19,7 +19,7 @@ class PermainanTradisionalScreen : BaseActivity() {
         hideStatusBar(this)
         media = MediaPlayer.create(this, R.raw.click)
         touchBackListener(binding.ivPermainanBack)
-        touchImageListener(binding.ivPermainanSetting, SettingScreen())
+        touchImageIntentListener(binding.ivPermainanSetting, SettingScreen(), true)
     }
 
 }

@@ -24,5 +24,11 @@
     <string name="button_close">Button Close</string>
     <string name="volume_frame">Volume Frame</string>
     <string name="sound_icon">Volume Sound Icon</string>
+    <string name="game_status_bar">Game</string>
+    <string name="button_play">Press Play to Start</string>
+    <string name="balloon_pertanyaan">Frame Pertanyaan</string>
+    <string name="balloon_jawaban">Frame Jawaban</string>
+    <string name="komoditas">Komoditas</string>
+    <string name="komoditas_frame">Komoditas Frame</string>
 
 </resources>

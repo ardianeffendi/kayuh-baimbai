@@ -11,43 +11,89 @@
         android:id="@+id/iv_komoditas_bg"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:contentDescription="@string/bg"
         android:scaleType="fitXY"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/sasirangan"
-        android:contentDescription="@string/bg" />
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/bg_sasirangan_double" />
 
     <ImageView
         android:id="@+id/iv_komoditas_bar"
         android:layout_width="0dp"
-        android:layout_height="45dp"
+        android:layout_height="50dp"
+        android:contentDescription="@string/status_bar"
         android:scaleType="fitXY"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/status_komoditas"
-        android:contentDescription="@string/status_bar" />
+        app:srcCompat="@drawable/status_bar" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:letterSpacing="0.2"
+        android:text="@string/komoditas"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_komoditas_bar"
+        app:layout_constraintEnd_toStartOf="@+id/iv_komoditas_setting"
+        app:layout_constraintStart_toEndOf="@+id/iv_komoditas_back"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/iv_komoditas_back"
-        android:layout_width="65dp"
-        android:layout_height="45dp"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:contentDescription="@string/button_back"
         android:scaleType="fitXY"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/back_button"
-        android:contentDescription="@string/button_back" />
+        app:srcCompat="@drawable/back_button" />
 
     <ImageView
         android:id="@+id/iv_komoditas_setting"
-        android:layout_width="65dp"
-        android:layout_height="45dp"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:contentDescription="@string/button_settings"
         android:scaleType="fitXY"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/setting_button"
-        android:contentDescription="@string/button_settings" />
+        app:srcCompat="@drawable/setting_button" />
+
+    <ImageView
+        android:id="@+id/iv_komoditas_frame"
+        android:layout_width="0dp"
+        android:layout_height="350dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_komoditas_bar"
+        app:srcCompat="@drawable/komoditas_information_frame"
+        android:contentDescription="@string/komoditas_frame" />
+
+    <ImageView
+        android:id="@+id/iv_komoditas_info"
+        android:layout_width="0dp"
+        android:layout_height="250dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="32dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_komoditas_frame"
+        app:srcCompat="@drawable/komoditas_full_info"
+        android:contentDescription="@string/komoditas_frame" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
