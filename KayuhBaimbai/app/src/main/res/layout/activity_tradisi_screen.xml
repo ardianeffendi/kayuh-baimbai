@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/black"
-    tools:context=".tradisibudaya.TradisiScreen">
+    tools:context=".ui.tradisibudaya.tradisi.TradisiScreen">
 
     <ImageView
         android:id="@+id/iv_tradisi_bg"
@@ -22,32 +22,53 @@
     <ImageView
         android:id="@+id/iv_tradisi_bar"
         android:layout_width="0dp"
-        android:layout_height="45dp"
+        android:layout_height="50dp"
+        android:contentDescription="@string/status_bar"
         android:scaleType="fitXY"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/status_tradisi"
-        android:contentDescription="@string/status_bar" />
+        app:srcCompat="@drawable/status_bar" />
 
     <ImageView
         android:id="@+id/iv_tradisi_back"
-        android:layout_width="65dp"
-        android:layout_height="45dp"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:contentDescription="@string/button_back"
         android:scaleType="fitXY"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/back_button"
-        android:contentDescription="@string/button_back" />
+        app:srcCompat="@drawable/back_button" />
 
     <ImageView
         android:id="@+id/iv_tradisi_setting"
-        android:layout_width="65dp"
-        android:layout_height="45dp"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:contentDescription="@string/button_settings"
         android:scaleType="fitXY"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/setting_button"
-        android:contentDescription="@string/button_settings" />
+        app:srcCompat="@drawable/setting_button" />
+
+    <TextView
+        android:id="@+id/tv_tradisi"
+        style="@style/StatusBarText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tradisi"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_tradisi_bar"
+        app:layout_constraintEnd_toStartOf="@+id/iv_tradisi_setting"
+        app:layout_constraintStart_toEndOf="@+id/iv_tradisi_back"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_tradisi"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        tools:listitem="@layout/layout_list_tradisi_budaya"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_tradisi_bar" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

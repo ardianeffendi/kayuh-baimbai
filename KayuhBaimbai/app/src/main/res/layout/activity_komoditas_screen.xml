@@ -1,25 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/black"
-    tools:context=".KomoditasScreen">
-
-    <ImageView
-        android:id="@+id/iv_komoditas_bg"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:contentDescription="@string/bg"
-        android:scaleType="fitXY"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/bg_sasirangan_double" />
+    android:background="@drawable/bg_sasirangan_double"
+    tools:context=".ui.komoditas.KomoditasScreen">
 
     <ImageView
         android:id="@+id/iv_komoditas_bar"
@@ -33,14 +20,13 @@
         app:srcCompat="@drawable/status_bar" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/tv_komoditas"
+        style="@style/StatusBarText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:letterSpacing="0.2"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
         android:text="@string/komoditas"
-        android:textColor="@color/white"
-        android:textSize="24sp"
-        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/iv_komoditas_bar"
         app:layout_constraintEnd_toStartOf="@+id/iv_komoditas_setting"
         app:layout_constraintStart_toEndOf="@+id/iv_komoditas_back"
@@ -66,34 +52,15 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/setting_button" />
 
-    <ImageView
-        android:id="@+id/iv_komoditas_frame"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_komoditas"
         android:layout_width="0dp"
-        android:layout_height="350dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="16dp"
-        android:scaleType="fitXY"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/iv_komoditas_bar"
-        app:srcCompat="@drawable/komoditas_information_frame"
-        android:contentDescription="@string/komoditas_frame" />
-
-    <ImageView
-        android:id="@+id/iv_komoditas_info"
-        android:layout_width="0dp"
-        android:layout_height="250dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginBottom="32dp"
-        android:scaleType="fitXY"
+        android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/iv_komoditas_frame"
-        app:srcCompat="@drawable/komoditas_full_info"
-        android:contentDescription="@string/komoditas_frame" />
+        app:layout_constraintTop_toBottomOf="@+id/iv_komoditas_bar"
+        tools:listitem="@layout/layout_list_komoditas" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -30,5 +30,10 @@
     <string name="balloon_jawaban">Frame Jawaban</string>
     <string name="komoditas">Komoditas</string>
     <string name="komoditas_frame">Komoditas Frame</string>
+    <string name="kesenian">Kesenian</string>
+    <string name="permainan_tradisional">Permainan Tradisional</string>
+    <string name="tradisi_budaya"><![CDATA[Tradisi & Budaya]]></string>
+    <string name="tradisi">Tradisi</string>
+    <string name="image_of_item">Image of Item</string>
 
 </resources>

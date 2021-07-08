@@ -5,31 +5,31 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/black"
-    tools:context=".MainScreen">
+    tools:context=".ui.MainScreen">
 
     <ImageView
         android:id="@+id/iv_bg"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:contentDescription="@string/bg"
         android:scaleType="fitXY"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/main_bg"
-        android:contentDescription="@string/bg" />
+        app:srcCompat="@drawable/main_bg" />
 
     <ImageView
         android:id="@+id/iv_title"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:contentDescription="@string/main_title"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toTopOf="@+id/guideline_title"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/main_kayuh_baimbai"
-        android:contentDescription="@string/main_title" />
+        app:srcCompat="@drawable/main_kayuh_baimbai" />
 
     <ImageView
         android:id="@+id/iv_setting"
@@ -46,44 +46,47 @@
         android:id="@+id/iv_title2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:contentDescription="@string/main_title2"
         app:layout_constraintEnd_toStartOf="@+id/guideline_hz_right"
         app:layout_constraintStart_toStartOf="@+id/guideline_hz_left"
         app:layout_constraintTop_toBottomOf="@+id/iv_title"
-        app:srcCompat="@drawable/main_rakat_bakula"
-        android:contentDescription="@string/main_title2" />
+        app:srcCompat="@drawable/main_rakat_bakula" />
 
     <ImageView
         android:id="@+id/iv_tradisi"
         android:layout_width="0dp"
         android:layout_height="150dp"
         android:layout_marginTop="16dp"
+        android:contentDescription="@string/button_tradisi_dan_budaya"
         android:scaleType="fitCenter"
+        android:soundEffectsEnabled="true"
         app:layout_constraintEnd_toStartOf="@+id/guideline_hz_right"
         app:layout_constraintStart_toStartOf="@+id/guideline_hz_left"
         app:layout_constraintTop_toTopOf="@+id/guideline_title"
-        app:srcCompat="@drawable/main_tradisi"
-        android:contentDescription="@string/button_tradisi_dan_budaya" />
+        app:srcCompat="@drawable/main_tradisi" />
 
     <ImageView
         android:id="@+id/iv_game"
         android:layout_width="0dp"
         android:layout_height="130dp"
+        android:contentDescription="@string/button_game"
+        android:soundEffectsEnabled="true"
         app:layout_constraintEnd_toStartOf="@+id/guideline_hz_right"
         app:layout_constraintStart_toStartOf="@+id/guideline_hz_left"
         app:layout_constraintTop_toTopOf="@+id/guideline_middle"
-        app:srcCompat="@drawable/main_game"
-        android:contentDescription="@string/button_game" />
+        app:srcCompat="@drawable/main_game" />
 
     <ImageView
         android:id="@+id/iv_komoditas"
         android:layout_width="0dp"
         android:layout_height="110dp"
         android:layout_marginTop="16dp"
+        android:contentDescription="@string/button_komoditas"
+        android:soundEffectsEnabled="true"
         app:layout_constraintEnd_toStartOf="@+id/guideline_hz_right"
         app:layout_constraintStart_toStartOf="@+id/guideline_hz_left"
         app:layout_constraintTop_toTopOf="@+id/guideline6"
-        app:srcCompat="@drawable/main_komoditas"
-        android:contentDescription="@string/button_komoditas" />
+        app:srcCompat="@drawable/main_komoditas" />
 
     <ImageView
         android:id="@+id/iv_left_instrumental"

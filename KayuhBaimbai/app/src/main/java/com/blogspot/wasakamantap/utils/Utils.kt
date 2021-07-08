@@ -4,8 +4,6 @@ import android.animation.ObjectAnimator
 import android.animation.PropertyValuesHolder
 import android.animation.ValueAnimator
 import android.app.Activity
-import android.content.Context
-import android.media.MediaPlayer
 import android.os.Build
 import android.view.View
 import android.view.WindowInsets
@@ -34,8 +32,4 @@ fun shrinkAndGrowAnim(view: View) : ObjectAnimator {
     scaleDown.repeatCount = ValueAnimator.INFINITE
 
     return scaleDown
-}
-
-fun mediaPlayer(context: Context, resId: Int): MediaPlayer {
-    return MediaPlayer.create(context, resId)
 }

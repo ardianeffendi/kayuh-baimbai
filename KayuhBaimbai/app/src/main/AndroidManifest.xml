@@ -2,6 +2,19 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.blogspot.wasakamantap">
 
+    <compatible-screens>
+        <!-- all small size screens -->
+        <screen android:screenSize="small" android:screenDensity="ldpi" />
+        <screen android:screenSize="small" android:screenDensity="mdpi" />
+        <screen android:screenSize="small" android:screenDensity="hdpi" />
+        <screen android:screenSize="small" android:screenDensity="xhdpi" />
+        <!-- all normal size screens -->
+        <screen android:screenSize="normal" android:screenDensity="ldpi" />
+        <screen android:screenSize="normal" android:screenDensity="mdpi" />
+        <screen android:screenSize="normal" android:screenDensity="hdpi" />
+        <screen android:screenSize="normal" android:screenDensity="xhdpi" />
+    </compatible-screens>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,24 +23,24 @@
         android:screenOrientation="portrait"
         android:supportsRtl="true"
         android:theme="@style/Theme.KayuhBaimbai">
-        <activity android:name=".GamePlayScreen"></activity>
-        <activity android:name=".SettingScreen" />
-        <activity android:name=".tradisibudaya.PermainanTradisionalScreen" />
-        <activity android:name=".tradisibudaya.KesenianScreen" />
-        <activity android:name=".tradisibudaya.TradisiScreen" />
-        <activity android:name=".tradisibudaya.TradisiBudayaScreen" />
-        <activity android:name=".GameScreen" />
-        <activity android:name=".KomoditasScreen" />
-        <activity android:name=".MainScreen" />
-        <activity android:name=".opening.BlankScreen" />
-        <activity android:name=".opening.OpeningScreen">
+        <activity android:name="com.blogspot.wasakamantap.ui.game.GamePlayScreen"></activity>
+        <activity android:name=".ui.SettingScreen" />
+        <activity android:name="com.blogspot.wasakamantap.ui.tradisibudaya.permainantradisional.PermainanTradisionalScreen" />
+        <activity android:name="com.blogspot.wasakamantap.ui.tradisibudaya.kesenian.KesenianScreen" />
+        <activity android:name="com.blogspot.wasakamantap.ui.tradisibudaya.tradisi.TradisiScreen" />
+        <activity android:name="com.blogspot.wasakamantap.ui.tradisibudaya.TradisiBudayaScreen" />
+        <activity android:name="com.blogspot.wasakamantap.ui.game.GameScreen" />
+        <activity android:name="com.blogspot.wasakamantap.ui.komoditas.KomoditasScreen" />
+        <activity android:name=".ui.MainScreen" />
+        <activity android:name="com.blogspot.wasakamantap.ui.opening.BlankScreen" />
+        <activity android:name="com.blogspot.wasakamantap.ui.opening.OpeningScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".opening.SplashScreen" />
+        <activity android:name="com.blogspot.wasakamantap.ui.opening.SplashScreen" />
     </application>
 
 </manifest>
