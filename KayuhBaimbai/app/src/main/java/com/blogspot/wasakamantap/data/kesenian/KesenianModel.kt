@@ -37,7 +37,29 @@ class KesenianModel {
         private val name: List<String> =
             listOf(
                 "Rumah Bubungan Tinggi",
-                "Lanting"
+                "Lanting",
+                "Ornamen Rumah Banjar",
+                "Upacara Baayun Mulud",
+                "Kayu Ulin",
+                "Meramu",
+                "Atap Sirap",
+                "Jukung Patai",
+                "Tikar Purun",
+                "Tikar Bamban",
+                "Nyiru",
+                "Sarunai",
+                "Babun",
+                "Lumma",
+                "Kangkanong",
+                "Kuriding",
+                "Panting",
+                "Payung Ubur-ubur",
+                "Tari Baksa Kambang",
+                "Tari Radap Rahayu",
+                "Tari Japin",
+                "Pasar Terapung",
+                "Sasirangan",
+                "Kitab Sabilal Muhtadin"
             )
 
         private val description: List<String> =

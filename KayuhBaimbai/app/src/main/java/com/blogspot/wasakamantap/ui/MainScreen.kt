@@ -1,11 +1,7 @@
 package com.blogspot.wasakamantap.ui
 
 import android.annotation.SuppressLint
-import android.content.Intent
 import android.os.Bundle
-import android.view.MotionEvent
-import android.view.SoundEffectConstants
-import android.view.View
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 import com.blogspot.wasakamantap.R

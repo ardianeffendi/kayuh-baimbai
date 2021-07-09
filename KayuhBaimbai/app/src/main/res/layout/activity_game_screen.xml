@@ -15,11 +15,10 @@
         android:scaleType="fitXY"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/game_bg" />
+        app:srcCompat="@drawable/bg_sasirangan_double" />
 
     <ImageView
         android:id="@+id/iv_game_status_bar"
@@ -75,5 +74,79 @@
         app:layout_constraintEnd_toStartOf="@+id/iv_game_setting"
         app:layout_constraintStart_toEndOf="@+id/iv_game_back"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_game_upper_left"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:contentDescription="@string/bg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_game_status_bar"
+        app:srcCompat="@drawable/game_leaf_upper_left" />
+
+    <ImageView
+        android:id="@+id/iv_game_upper_right"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:contentDescription="@string/bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_game_status_bar"
+        app:srcCompat="@drawable/game_leaf_upper_right" />
+
+    <ImageView
+        android:id="@+id/iv_game_diamond_left"
+        android:layout_width="80dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="32dp"
+        android:contentDescription="@string/bg"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toTopOf="@+id/iv_game_bottom_left"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/game_leaf_bottom_left" />
+
+    <ImageView
+        android:id="@+id/iv_game_leaf_right"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginEnd="32dp"
+        android:contentDescription="@string/bg"
+        app:layout_constraintBottom_toTopOf="@+id/iv_game_bottom_right"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/game_leaf_bottom_right" />
+
+    <ImageView
+        android:id="@+id/iv_game_bottom_right"
+        android:layout_width="0dp"
+        android:layout_height="180dp"
+        android:layout_marginStart="42dp"
+        android:contentDescription="@string/bg"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:srcCompat="@drawable/game_bottom_right_bg" />
+
+    <ImageView
+        android:id="@+id/iv_game_bottom_left"
+        android:layout_width="0dp"
+        android:layout_height="180dp"
+        android:layout_marginEnd="42dp"
+        android:contentDescription="@string/bg"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/game_bottom_left_bg" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

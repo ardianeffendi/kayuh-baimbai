@@ -1,9 +1,7 @@
 package com.blogspot.wasakamantap.ui.game
 
 import android.annotation.SuppressLint
-import android.media.MediaPlayer
 import android.os.Bundle
-import com.blogspot.wasakamantap.R
 import com.blogspot.wasakamantap.databinding.ActivityGameScreenBinding
 import com.blogspot.wasakamantap.ui.BaseActivity
 import com.blogspot.wasakamantap.ui.SettingScreen

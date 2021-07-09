@@ -19,9 +19,15 @@ class KomoditasViewHolder(
 
     fun bind(model: Data) {
         binding.apply {
-            Glide.with(ivKomoditasImage.context)
-                .load(model.picture)
-                .into(ivKomoditasImage)
+            if (model.picture == 0) {
+                Glide.with(ivKomoditasImage.context)
+                    .load(R.drawable.no_image_available)
+                    .into(ivKomoditasImage)
+            } else {
+                Glide.with(ivKomoditasImage.context)
+                    .load(model.picture)
+                    .into(ivKomoditasImage)
+            }
             tvKomoditasDescription.text = model.description
             tvKomoditasName.text = model.name
             tvKomoditasJenis.text = model.type

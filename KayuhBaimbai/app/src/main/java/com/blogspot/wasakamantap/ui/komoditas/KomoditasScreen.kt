@@ -3,8 +3,8 @@ package com.blogspot.wasakamantap.ui.komoditas
 import android.annotation.SuppressLint
 import android.media.MediaPlayer
 import android.os.Bundle
-import androidx.lifecycle.ViewModelProvider
-import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.fragment.app.Fragment
+import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.blogspot.wasakamantap.R
 import com.blogspot.wasakamantap.adapter.KomoditasAdapter
 import com.blogspot.wasakamantap.databinding.ActivityKomoditasScreenBinding
@@ -35,20 +35,35 @@ class KomoditasScreen : BaseActivity() {
         touchBackListener(binding.ivKomoditasBack)
         touchImageIntentListener(binding.ivKomoditasSetting, SettingScreen(), true)
 
-        // Instantiate the view model
-        viewModel = ViewModelProvider(this).get(KomoditasViewModel::class.java)
+        // The pager adapter, which provides the pages to the view pager widget.
+        binding.viewPager.adapter = object : FragmentStateAdapter(this) {
+            override fun getItemCount(): Int {
+                return 5
+            }
 
-        // Bind the adapter
-        komoditasAdapter = KomoditasAdapter(this)
-        komoditasAdapter.submitList(viewModel.getMasakanKhas())
+            override fun createFragment(position: Int): Fragment {
+                var fragment: Fragment? = null
+                when (position) {
+                    0 -> fragment = MasakanKhasFragment()
+                    1 -> fragment = KueBasahFragment()
+                    2 -> fragment = SayuranBuahIkanFragment()
+                    3 -> fragment = WadaiKaringFragment()
+                    4 -> fragment = MakananDiawetkanFragment()
+                }
+                return fragment as Fragment
+            }
 
-        showRecyclerList()
+        }
     }
 
-    private fun showRecyclerList() {
-        binding.rvKomoditas.apply {
-            layoutManager = LinearLayoutManager(this@KomoditasScreen)
-            adapter = komoditasAdapter
+    override fun onBackPressed() {
+        if (binding.viewPager.currentItem == 0) {
+            // If the user is currently looking at the first step, allow the system to handle the
+            // Back button. This calls finish() on this activity and pops the back stack.
+            super.onBackPressed()
+        } else {
+            // Otherwise, select the previous step.
+            binding.viewPager.currentItem = binding.viewPager.currentItem - 1
         }
     }
 }

@@ -3,6 +3,7 @@ package com.blogspot.wasakamantap.ui.tradisibudaya.tradisi
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.blogspot.wasakamantap.R
 import com.blogspot.wasakamantap.data.Data
 import com.blogspot.wasakamantap.databinding.LayoutListTradisiBudayaBinding
 import com.bumptech.glide.Glide
@@ -13,9 +14,15 @@ class TradisiViewHolder(
 
     fun bind(model: Data) {
         binding.apply {
-            Glide.with(binding.ivImage.context)
-                .load(model.picture)
-                .into(ivImage)
+            if (model.picture == 0) {
+                Glide.with(binding.ivImage.context)
+                    .load(R.drawable.no_image_available)
+                    .into(ivImage)
+            } else {
+                Glide.with(binding.ivImage.context)
+                    .load(model.picture)
+                    .into(ivImage)
+            }
             tvDesc.text = model.description
         }
     }
