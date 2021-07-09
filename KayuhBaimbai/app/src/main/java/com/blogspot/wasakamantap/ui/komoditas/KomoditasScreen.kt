@@ -54,6 +54,7 @@ class KomoditasScreen : BaseActivity() {
             }
 
         }
+
     }
 
     override fun onBackPressed() {

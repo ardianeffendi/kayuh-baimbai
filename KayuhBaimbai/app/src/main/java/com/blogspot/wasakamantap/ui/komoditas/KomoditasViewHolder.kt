@@ -1,7 +1,10 @@
 package com.blogspot.wasakamantap.ui.komoditas
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.view.LayoutInflater
+import android.view.MotionEvent
+import android.view.View
 import android.view.ViewGroup
 import android.view.animation.AnimationUtils
 import androidx.recyclerview.widget.RecyclerView
@@ -10,6 +13,7 @@ import com.blogspot.wasakamantap.data.Data
 import com.blogspot.wasakamantap.databinding.LayoutListKomoditasBinding
 import com.bumptech.glide.Glide
 
+@SuppressLint("ClickableViewAccessibility")
 class KomoditasViewHolder(
     private val binding: LayoutListKomoditasBinding,
     context: Context
@@ -33,9 +37,9 @@ class KomoditasViewHolder(
             tvKomoditasJenis.text = model.type
             tvKomoditasAlamat.text = model.address
             tvKomoditasHarga.text = model.price
-
             ivKuridingLeft.animation = shakyAnimation
             ivKuridingRight.animation = shakyAnimation
+
         }
     }
 

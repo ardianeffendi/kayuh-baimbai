@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     tools:context=".ui.komoditas.SayuranBuahIkanFragment">
 
-    <androidx.recyclerview.widget.RecyclerView
+    <com.blogspot.wasakamantap.utils.NestedRecyclerView
         android:id="@+id/rv_sayuran_buah_ikan"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
