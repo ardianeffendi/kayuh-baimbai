@@ -103,22 +103,27 @@ class KomoditasScreen : BaseActivity() {
                 super.onPageSelected(position)
                 when (position) {
                     0 -> {
+                        stopMedia()
                         binding.btnPrev.visibility = View.INVISIBLE
                         binding.btnNext.visibility = View.VISIBLE
                     }
                     1 -> {
+                        stopMedia()
                         binding.btnPrev.visibility = View.VISIBLE
                         binding.btnNext.visibility = View.VISIBLE
                     }
                     2 -> {
+                        stopMedia()
                         binding.btnPrev.visibility = View.VISIBLE
                         binding.btnNext.visibility = View.VISIBLE
                     }
                     3 -> {
+                        stopMedia()
                         binding.btnPrev.visibility = View.VISIBLE
                         binding.btnNext.visibility = View.VISIBLE
                     }
                     4 -> {
+                        stopMedia()
                         binding.btnPrev.visibility = View.VISIBLE
                         binding.btnNext.visibility = View.INVISIBLE
                     }
