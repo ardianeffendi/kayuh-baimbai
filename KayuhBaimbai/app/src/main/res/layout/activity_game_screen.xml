@@ -101,7 +101,7 @@
         android:id="@+id/iv_game_diamond_left"
         android:layout_width="80dp"
         android:layout_height="120dp"
-        android:layout_marginStart="32dp"
+        android:layout_marginStart="16dp"
         android:contentDescription="@string/bg"
         android:scaleType="fitXY"
         app:layout_constraintBottom_toTopOf="@+id/iv_game_bottom_left"
@@ -110,10 +110,11 @@
 
     <ImageView
         android:id="@+id/iv_game_leaf_right"
-        android:layout_width="120dp"
+        android:layout_width="100dp"
         android:layout_height="120dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginEnd="16dp"
         android:contentDescription="@string/bg"
+        android:scaleType="fitXY"
         app:layout_constraintBottom_toTopOf="@+id/iv_game_bottom_right"
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@drawable/game_leaf_bottom_right" />

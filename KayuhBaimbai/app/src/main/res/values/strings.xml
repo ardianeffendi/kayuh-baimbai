@@ -35,5 +35,6 @@
     <string name="tradisi_budaya"><![CDATA[Tradisi & Budaya]]></string>
     <string name="tradisi">Tradisi</string>
     <string name="image_of_item">Image of Item</string>
+    <string name="next_button">Next Button</string>
 
 </resources>
