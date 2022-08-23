@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".ui.tradisibudaya.TradisiBudayaScreen">
+
+    <ImageView
+        android:id="@+id/iv_tradisi_budaya_bg"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/bg"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/bg_sasirangan_double" />
+
+    <ImageView
+        android:id="@+id/iv_tradisi_budaya_bar"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:contentDescription="@string/bg"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/status_bar" />
+
+    <ImageView
+        android:id="@+id/iv_tradisi_budaya_back"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:contentDescription="@string/button_back"
+        android:scaleType="fitXY"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/back_button" />
+
+    <ImageView
+        android:id="@+id/iv_setting_tradisi_budaya"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:contentDescription="@string/button_settings"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/setting_button" />
+
+    <ImageView
+        android:id="@+id/iv_tradisi_balloon"
+        android:layout_width="0dp"
+        android:layout_height="86dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="92dp"
+        android:layout_marginEnd="24dp"
+        android:contentDescription="@string/tradisi_balloon"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_50percent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_tradisi_budaya_bar"
+        app:srcCompat="@drawable/tradisi_balloon_button" />
+
+    <ImageView
+        android:id="@+id/iv_kesenian_balloon"
+        android:layout_width="0dp"
+        android:layout_height="86dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="92dp"
+        android:layout_marginEnd="16dp"
+        android:contentDescription="@string/kesenian_balloon_button"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline_50percent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_tradisi_budaya_bar"
+        app:srcCompat="@drawable/kesenian_balloon_button" />
+
+    <ImageView
+        android:id="@+id/iv_traditional_game_balloon"
+        android:layout_width="0dp"
+        android:layout_height="86dp"
+        android:layout_marginStart="104dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="104dp"
+        android:contentDescription="@string/traditional_game_balloon_button"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="@+id/iv_kesenian_balloon"
+        app:layout_constraintStart_toStartOf="@+id/iv_tradisi_balloon"
+        app:layout_constraintTop_toTopOf="@+id/guideline_horizontal_35percent"
+        app:srcCompat="@drawable/traditional_game_balloon_button" />
+
+    <ImageView
+        android:id="@+id/iv_alat_kesenian_left"
+        android:layout_width="0dp"
+        android:layout_height="250dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="16dp"
+        android:contentDescription="@string/left_instrumental"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toStartOf="@+id/iv_traditional_game_balloon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline_horizontal_35percent"
+        app:srcCompat="@drawable/alat_kesenian_left" />
+
+    <ImageView
+        android:id="@+id/iv_alat_kesenian_right"
+        android:layout_width="0dp"
+        android:layout_height="250dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="16dp"
+        android:contentDescription="@string/right_instrumental"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/iv_traditional_game_balloon"
+        app:layout_constraintTop_toTopOf="@+id/guideline_horizontal_35percent"
+        app:srcCompat="@drawable/alat_kesenian_right" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_50percent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_horizontal_35percent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.4" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_horizontal_50percent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.6" />
+
+    <TextView
+        android:id="@+id/textView"
+        style="@style/StatusBarText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/tradisi_budaya"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_tradisi_budaya_bar"
+        app:layout_constraintEnd_toStartOf="@+id/iv_setting_tradisi_budaya"
+        app:layout_constraintStart_toEndOf="@+id/iv_tradisi_budaya_back"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

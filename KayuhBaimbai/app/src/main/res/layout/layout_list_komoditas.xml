@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/iv_komoditas_media_frame"
+        android:layout_width="0dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="32dp"
+        android:contentDescription="@string/komoditas_frame"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toStartOf="@+id/iv_kuriding_right"
+        app:layout_constraintStart_toEndOf="@+id/iv_kuriding_left"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/komoditas_media_frame" />
+
+    <ImageView
+        android:id="@+id/iv_kuriding_left"
+        android:layout_width="70dp"
+        android:layout_height="250dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:contentDescription="@string/komoditas_frame"
+        android:scaleType="fitXY"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/kuriding_left" />
+
+    <ImageView
+        android:id="@+id/iv_kuriding_right"
+        android:layout_width="70dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:contentDescription="@string/komoditas_frame"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/kuriding_right" />
+
+    <ImageView
+        android:id="@+id/iv_komoditas_media_info"
+        android:layout_width="280dp"
+        android:layout_height="119dp"
+        android:layout_marginTop="8dp"
+        android:contentDescription="@string/komoditas_frame"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_komoditas_media_frame"
+        app:srcCompat="@drawable/komoditas_media_info" />
+
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nested_scroll_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="16dp"
+        android:fadeScrollbars="false"
+        android:scrollbarThumbVertical="@drawable/scroll_bar_thumb"
+        android:scrollbars="vertical"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_komoditas_media_info"
+        app:layout_constraintEnd_toEndOf="@+id/iv_komoditas_media_info"
+        app:layout_constraintStart_toStartOf="@+id/iv_komoditas_media_info"
+        app:layout_constraintTop_toTopOf="@+id/iv_komoditas_media_info">
+
+        <TextView
+            android:id="@+id/tv_komoditas_description"
+            style="@style/ColonnaStyleText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            tools:layout_editor_absoluteX="65dp"
+            tools:layout_editor_absoluteY="118dp"
+            tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." />
+
+    </androidx.core.widget.NestedScrollView>
+
+    <ImageView
+        android:id="@+id/iv_komoditas_info"
+        android:layout_width="0dp"
+        android:layout_height="250dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="@string/komoditas_frame"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_komoditas_media_info"
+        app:srcCompat="@drawable/komoditas_full_info" />
+
+    <TextView
+        android:id="@+id/tv_komoditas_name"
+        style="@style/ColonnaStyleText"
+        android:layout_width="0dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="24dp"
+        app:autoSizeMaxTextSize="20sp"
+        app:autoSizeMinTextSize="12sp"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintEnd_toEndOf="@+id/iv_komoditas_info"
+        app:layout_constraintStart_toStartOf="@+id/guideline3"
+        app:layout_constraintTop_toTopOf="@+id/iv_komoditas_info"
+        tools:text="Lorem Ipsum" />
+
+    <TextView
+        android:id="@+id/tv_komoditas_jenis"
+        style="@style/ColonnaStyleText"
+        android:layout_width="0dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="12dp"
+        app:autoSizeMaxTextSize="20sp"
+        app:autoSizeMinTextSize="12sp"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintEnd_toEndOf="@+id/tv_komoditas_name"
+        app:layout_constraintStart_toStartOf="@+id/guideline3"
+        app:layout_constraintTop_toBottomOf="@+id/tv_komoditas_name"
+        tools:text="dolor sit amet" />
+
+    <TextView
+        android:id="@+id/tv_komoditas_alamat"
+        style="@style/ColonnaStyleText"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="12dp"
+        app:autoSizeMaxTextSize="20sp"
+        app:autoSizeMinTextSize="12sp"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintEnd_toEndOf="@+id/tv_komoditas_jenis"
+        app:layout_constraintStart_toStartOf="@+id/guideline3"
+        app:layout_constraintTop_toBottomOf="@+id/tv_komoditas_jenis"
+        tools:text="consectetur adipiscing elit" />
+
+    <TextView
+        android:id="@+id/tv_komoditas_harga"
+        style="@style/ColonnaStyleText"
+        android:layout_width="0dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        app:autoSizeMaxTextSize="20sp"
+        app:autoSizeMinTextSize="12sp"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintEnd_toEndOf="@+id/iv_komoditas_info"
+        app:layout_constraintStart_toStartOf="@+id/guideline4"
+        app:layout_constraintTop_toBottomOf="@+id/tv_komoditas_alamat"
+        tools:text="Rp 100.000" />
+
+    <ImageView
+        android:id="@+id/iv_komoditas_image"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="24dp"
+        android:contentDescription="@string/image_of_item"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_komoditas_media_frame"
+        app:layout_constraintEnd_toEndOf="@+id/iv_komoditas_media_frame"
+        app:layout_constraintStart_toStartOf="@+id/iv_komoditas_media_frame"
+        app:layout_constraintTop_toTopOf="@+id/iv_komoditas_media_frame"
+        tools:srcCompat="@drawable/komoditas_amplang" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="136dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="210dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

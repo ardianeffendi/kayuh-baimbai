@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".ui.tradisibudaya.kesenian.KesenianScreen">
+
+    <ImageView
+        android:id="@+id/iv_kesenian_bg"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/bg"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/bg_sasirangan_double" />
+
+    <ImageView
+        android:id="@+id/iv_kesenian_bar"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:contentDescription="@string/bg"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/status_bar" />
+
+    <ImageView
+        android:id="@+id/iv_kesenian_back"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:contentDescription="@string/button_back"
+        android:scaleType="fitXY"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/back_button" />
+
+    <ImageView
+        android:id="@+id/iv_setting_kesenian"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:contentDescription="@string/button_settings"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/setting_button" />
+
+    <TextView
+        android:id="@+id/tv_kesenian"
+        style="@style/StatusBarText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/kesenian"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_kesenian_bar"
+        app:layout_constraintEnd_toStartOf="@+id/iv_setting_kesenian"
+        app:layout_constraintStart_toEndOf="@+id/iv_kesenian_back"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_kesenian"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        tools:listitem="@layout/layout_list_tradisi_budaya"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_kesenian_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_kesenian_bar" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

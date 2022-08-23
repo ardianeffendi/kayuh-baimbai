@@ -1,4 +1,40 @@
 <resources>
     <string name="app_name">KayuhBaimbai</string>
+
+    <!-- Content Description Strings -->
     <string name="splash_screen">Splash Screen</string>
+    <string name="main_title">Main Title</string>
+    <string name="bg">Background</string>
+    <string name="button_settings">Settings Button</string>
+    <string name="main_title2">Title 2</string>
+    <string name="button_tradisi_dan_budaya">Tradisi dan Budaya\'s Button</string>
+    <string name="button_game">Game\'s button</string>
+    <string name="button_komoditas">Komoditas\' button</string>
+    <string name="left_instrumental">Left Instrumental\'s Image</string>
+    <string name="right_instrumental">Right Instrumental\'s Image</string>
+    <string name="button_back">Back Button</string>
+    <string name="tradisi_balloon">Tradisi Button</string>
+    <string name="kesenian_balloon_button">Kesenian Button</string>
+    <string name="traditional_game_balloon_button">Permainan Tradisional Button</string>
+    <string name="status_bar">Status Bar</string>
+    <string name="setting_frame">Setting\'s Frame</string>
+    <string name="setting_volume_button">Volume Button</string>
+    <string name="setting_exit_button">Exit Button</string>
+    <string name="setting_main_menu_button">Main Menu Button</string>
+    <string name="button_close">Button Close</string>
+    <string name="volume_frame">Volume Frame</string>
+    <string name="sound_icon">Volume Sound Icon</string>
+    <string name="game_status_bar">Game</string>
+    <string name="button_play">Press Play to Start</string>
+    <string name="balloon_pertanyaan">Frame Pertanyaan</string>
+    <string name="balloon_jawaban">Frame Jawaban</string>
+    <string name="komoditas">Komoditas</string>
+    <string name="komoditas_frame">Komoditas Frame</string>
+    <string name="kesenian">Kesenian</string>
+    <string name="permainan_tradisional">Permainan Tradisional</string>
+    <string name="tradisi_budaya"><![CDATA[Tradisi & Budaya]]></string>
+    <string name="tradisi">Tradisi</string>
+    <string name="image_of_item">Image of Item</string>
+    <string name="next_button">Next Button</string>
+
 </resources>
